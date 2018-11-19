@@ -85,9 +85,9 @@ last_pub_date = (articles["response"]["docs"][i]["pub_date"][0] + articles["resp
 
 print(last_pub_date)
 
-with open(('C:/Users/NHari/Documents/MSc/Intership/Pytho/data_new/'+ search_term + '_raw_data/' + '19700101' +'_to_' + str(last_pub_date) + '_'+ search_term + '_raw.py'), 'wb') as fp:
+with open(('PATH'+ search_term + '_raw_data/' + '19700101' +'_to_' + str(last_pub_date) + '_'+ search_term + '_raw.py'), 'wb') as fp:
     pickle.dump(complete_articles_collection, fp)
-with open(('C:/Users/NHari/Documents/MSc/Intership/Pytho/data_new/'+ search_term +'_processed_data/' + '19700101' + '_to_' + str(last_pub_date) + '_'+ search_term + '_processed.py'), 'wb') as fp:
+with open(('PATH'+ search_term +'_processed_data/' + '19700101' + '_to_' + str(last_pub_date) + '_'+ search_term + '_processed.py'), 'wb') as fp:
     pickle.dump(complete_collection, fp)
 
 #%%
@@ -100,10 +100,10 @@ np.save('my_file.npy', dictionary)
 read_dictionary = np.load('my_file.npy').item()
 
 """
-with open(('C:/Users/NHari/Documents/MSc/Intership/Pytho/data_new/' + date + '_'+ search_term +'_raw_data.py'), 'wb') as fp:
+with open(('PATH' + date + '_'+ search_term +'_raw_data.py'), 'wb') as fp:
     pickle.dump(complete_articles_collection, fp)
     
-with open(('C:/Users/NHari/Documents/MSc/Intership/Pytho/data_new/'+ date + "_"+ search_term + "_processed_data.py"), 'wb') as fp:
+with open(('PATH'+ date + "_"+ search_term + "_processed_data.py"), 'wb') as fp:
     pickle.dump(complete_collection, fp)
 
 #np.save((date + '- raw_data.npy'), complete_articles_collection)
